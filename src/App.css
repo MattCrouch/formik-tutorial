@@ -1,25 +1,23 @@
 header {
+  align-items: center;
   background-color: #1f7a8c;
   display: flex;
-  align-items: center;
   justify-content: center;
-  /* height: 50vh;
-  min-height: 10rem; */
   padding: 0 1rem 5rem;
 }
 
 header h1 {
+  color: #fcfcfc;
   font-size: 2rem;
   font-weight: bold;
-  color: #fcfcfc;
-  text-transform: uppercase;
-  text-align: center;
   margin: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.vote {
+.vote-container {
   background-color: #022b3a;
-  border-radius: 2rem;
+  border-radius: 1rem;
   color: #fcfcfc;
   margin: -5rem 1rem 0;
   padding: 1rem;

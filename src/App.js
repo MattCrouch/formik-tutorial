@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Vote from "./Vote";
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       <header>
         <h1>Vote for your favourite</h1>
       </header>
-      <section class="vote">form goes here</section>
+      <section className="vote-container">
+        <Vote />
+      </section>
     </>
   );
 }

@@ -1,0 +1,24 @@
+.vote input {
+  border: none;
+  border-radius: 1rem;
+  font: inherit;
+  padding: 0.5rem;
+}
+
+.vote input[type="text"] {
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.vote label {
+  display: inline-block;
+  margin: 0 0.5rem 0.25rem;
+}
+
+.vote input[type="submit"] {
+  appearance: none;
+  background-color: #1f7a8c;
+  color: #fcfcfc;
+  cursor: pointer;
+}

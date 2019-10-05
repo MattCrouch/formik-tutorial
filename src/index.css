@@ -1,5 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   background: #fcfcfc;
   font-size: 22px;
+}
+
+body {
   font-family: "Rubik", sans-serif;
+  line-height: 1.5;
 }
