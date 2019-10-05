@@ -6,11 +6,15 @@ function App() {
   return (
     <>
       <header>
-        <h1>Vote for your favourite</h1>
+        <div className="container">
+          <h1>Vote for your favourite</h1>
+        </div>
       </header>
-      <section className="vote-container">
-        <Vote />
-      </section>
+      <div className="container">
+        <section className="vote-container">
+          <Vote />
+        </section>
+      </div>
     </>
   );
 }
