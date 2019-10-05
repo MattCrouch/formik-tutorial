@@ -1,3 +1,7 @@
+.vote .input-group {
+  margin-bottom: 0.75rem;
+}
+
 .vote input {
   border: none;
   border-radius: 1rem;
@@ -7,13 +11,26 @@
 
 .vote input[type="text"] {
   display: block;
-  margin-bottom: 1rem;
   width: 100%;
+}
+
+.vote .validation-group {
+  border-radius: 1rem;
+  padding: 0.25rem;
+}
+
+.vote .validation-group.error {
+  background-color: #d00000;
 }
 
 .vote label {
   display: inline-block;
   margin: 0 0.5rem 0.25rem;
+}
+
+.vote .error-message {
+  font-size: 0.75rem;
+  margin: 0.25rem 0 0 0.5rem;
 }
 
 .vote input[type="submit"] {
