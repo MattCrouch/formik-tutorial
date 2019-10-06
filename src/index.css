@@ -4,9 +4,12 @@
 
 html {
   --main-background-color: #fcfcfc;
+  --main-background-hover-color: #efefef;
   --heading-background-color: #1f7a8c;
+  --heading-background-selected-color: #1c6e7f;
   --container-background-color: #022b3a;
   --selected-color: #6ccff6;
+  --selected-selected-color: #66c3e8;
   --text-color: #001011;
   --error-color: #d00000;
 

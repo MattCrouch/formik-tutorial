@@ -15,6 +15,11 @@
   color: var(--text-color);
 }
 
+.vote input[type="text"]:focus,
+.vote input[type="text"]:hover {
+  background-color: var(--main-background-hover-color);
+}
+
 .vote .validation-group {
   border-radius: 1rem;
   padding: 0.25rem;
@@ -39,4 +44,9 @@
   background-color: var(--heading-background-color);
   color: var(--main-background-color);
   cursor: pointer;
+}
+
+.vote input[type="submit"]:focus,
+.vote input[type="submit"]:hover {
+  background-color: var(--heading-background-selected-color);
 }

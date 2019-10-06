@@ -14,8 +14,19 @@
   width: 100%;
   padding: 0.5rem;
   color: var(--text-color);
+  transition: background-color 0.1s ease-out;
+}
+
+.answer-group label:focus,
+.answer-group label:hover {
+  background-color: var(--main-background-hover-color);
 }
 
 .answer-group input:checked + label {
   background-color: var(--selected-color);
+}
+
+.answer-group input:checked:focus + label,
+.answer-group input:checked + label:hover {
+  background-color: var(--selected-selected-color);
 }
