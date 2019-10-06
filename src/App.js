@@ -26,7 +26,7 @@ function App() {
     <>
       <header>
         <div className="container">
-          <h1>Vote for your favourite</h1>
+          <h1>Submit your answer</h1>
         </div>
       </header>
       <div className="container">

@@ -5,7 +5,7 @@ import "./AnswerGroup.css";
 function AnswerGroup({ options, field, form, props }) {
   return (
     <fieldset className="answer-group">
-      <legend>Vote</legend>
+      <legend>Answer</legend>
       <div
         className={classNames({
           "validation-group": true,
