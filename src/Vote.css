@@ -1,7 +1,3 @@
-.vote .input-group {
-  margin-bottom: 0.75rem;
-}
-
 .vote input {
   border: none;
   border-radius: 1rem;
@@ -10,33 +6,14 @@
 }
 
 .vote input[type="text"] {
+  color: var(--text-color);
   display: block;
   width: 100%;
-  color: var(--text-color);
 }
 
 .vote input[type="text"]:focus,
 .vote input[type="text"]:hover {
   background-color: var(--main-background-hover-color);
-}
-
-.vote .validation-group {
-  border-radius: 1rem;
-  padding: 0.25rem;
-}
-
-.vote .validation-group.error {
-  background-color: var(--error-color);
-}
-
-.vote .input-group label {
-  display: inline-block;
-  margin: 0 0.5rem 0.25rem;
-}
-
-.vote .error-message {
-  font-size: 0.75rem;
-  margin: 0.25rem 0 0 0.5rem;
 }
 
 .vote input[type="submit"] {
@@ -49,4 +26,27 @@
 .vote input[type="submit"]:focus,
 .vote input[type="submit"]:hover {
   background-color: var(--action-hover-color);
+}
+
+.vote .error-message {
+  font-size: 0.75rem;
+  margin: 0.25rem 0 0 0.5rem;
+}
+
+.vote .input-group {
+  margin-bottom: 0.75rem;
+}
+
+.vote .input-group label {
+  display: inline-block;
+  margin: 0 0.5rem 0.25rem;
+}
+
+.vote .validation-group {
+  border-radius: 1rem;
+  padding: 0.25rem;
+}
+
+.vote .validation-group.error {
+  background-color: var(--error-color);
 }
