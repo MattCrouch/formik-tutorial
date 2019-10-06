@@ -1,27 +1,34 @@
 import React from "react";
 import { Formik, Field } from "formik";
 import classNames from "classnames";
+import AnswerGroup from "./AnswerGroup";
 import "./Vote.css";
 
 // Form component
-const Form = ({ errors, handleSubmit }) => (
-  <form className="vote" onSubmit={handleSubmit}>
-    <div className="input-group">
-      <label htmlFor="name">Name</label>
-      <div
-        className={classNames({
-          "validation-group": true,
-          error: !!errors.name
-        })}
-      >
-        <Field autoComplete="name" type="text" id="name" name="name" />
-        {!!errors.name && <div className="error-message">{errors.name}</div>}
+function Form({ touched, errors, handleSubmit }) {
+  return (
+    <form className="vote" onSubmit={handleSubmit}>
+      <div className="input-group">
+        <label htmlFor="name">Name</label>
+        <div
+          className={classNames({
+            "validation-group": true,
+            error: !!errors.name && touched.name
+          })}
+        >
+          <Field autoComplete="name" type="text" id="name" name="name" />
+          {!!errors.name && touched.name && (
+            <div className="error-message">{errors.name}</div>
+          )}
+        </div>
       </div>
-    </div>
 
-    <input type="submit" value="Vote now" />
-  </form>
-);
+      <Field component={AnswerGroup} name="answer" />
+
+      <input type="submit" value="Vote now" />
+    </form>
+  );
+}
 
 // Exported function
 function Vote() {
@@ -36,12 +43,16 @@ function Vote() {
       errors.name = "Name is required";
     }
 
+    if (!values.answer) {
+      errors.answer = "Answer is required";
+    }
+
     return errors;
   };
 
   return (
     <Formik
-      initialValues={{ name: "" }}
+      initialValues={{ name: "", answer: "" }}
       onSubmit={onSubmit}
       validate={validate}
       render={props => <Form {...props} />}
