@@ -12,6 +12,7 @@
 .vote input[type="text"] {
   display: block;
   width: 100%;
+  color: #001011;
 }
 
 .vote .validation-group {
@@ -23,7 +24,7 @@
   background-color: #d00000;
 }
 
-.vote label {
+.vote .input-group label {
   display: inline-block;
   margin: 0 0.5rem 0.25rem;
 }

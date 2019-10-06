@@ -3,7 +3,7 @@ import "./AnswerGroup.css";
 
 function AnswerGroup({ options, field, form, props }) {
   return (
-    <fieldset>
+    <fieldset className="answer-group">
       <legend>Vote</legend>
       {options.map(({ label, value }) => (
         <React.Fragment key={value}>
