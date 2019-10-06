@@ -41,12 +41,12 @@
 
 .vote input[type="submit"] {
   appearance: none;
-  background-color: var(--heading-background-color);
+  background-color: var(--action-color);
   color: var(--main-background-color);
   cursor: pointer;
 }
 
 .vote input[type="submit"]:focus,
 .vote input[type="submit"]:hover {
-  background-color: var(--heading-background-selected-color);
+  background-color: var(--action-hover-color);
 }

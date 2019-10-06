@@ -1,6 +1,6 @@
 header {
   align-items: center;
-  background-color: var(--heading-background-color);
+  background-color: var(--action-color);
   display: flex;
   padding: 0 1rem 5rem;
 }
