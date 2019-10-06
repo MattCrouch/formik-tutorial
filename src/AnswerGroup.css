@@ -1,8 +1,17 @@
+.answer-group {
+  margin-bottom: 0.75rem;
+}
+
 .answer-group input {
   position: absolute;
   opacity: 0;
   height: 0;
   width: 0;
+}
+
+.answer-group legend {
+  display: inline-block;
+  margin: 0 0.5rem 0.25rem;
 }
 
 .answer-group label {
