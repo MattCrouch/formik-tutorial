@@ -5,7 +5,7 @@ import AnswerGroup from "./AnswerGroup";
 import "./Vote.css";
 
 // Form component
-function Form({ touched, errors, handleSubmit }) {
+function Form({ options, touched, errors, handleSubmit }) {
   return (
     <form className="vote" onSubmit={handleSubmit}>
       <div className="input-group">
@@ -23,7 +23,7 @@ function Form({ touched, errors, handleSubmit }) {
         </div>
       </div>
 
-      <Field component={AnswerGroup} name="answer" />
+      <Field component={AnswerGroup} options={options} name="answer" />
 
       <input type="submit" value="Vote now" />
     </form>
@@ -31,7 +31,7 @@ function Form({ touched, errors, handleSubmit }) {
 }
 
 // Exported function
-function Vote() {
+function Vote({ options }) {
   const onSubmit = values => {
     console.log(values);
   };
@@ -55,7 +55,7 @@ function Vote() {
       initialValues={{ name: "", answer: "" }}
       onSubmit={onSubmit}
       validate={validate}
-      render={props => <Form {...props} />}
+      render={props => <Form {...props} options={options} />}
     />
   );
 }
