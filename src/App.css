@@ -1,12 +1,12 @@
 header {
   align-items: center;
-  background-color: #1f7a8c;
+  background-color: var(--heading-background-color);
   display: flex;
   padding: 0 1rem 5rem;
 }
 
 header h1 {
-  color: #fcfcfc;
+  color: var(--main-background-color);
   font-size: 1.5rem;
   font-weight: bold;
   margin: 2rem 0;
@@ -15,9 +15,9 @@ header h1 {
 }
 
 .vote-container {
-  background-color: #022b3a;
+  background-color: var(--container-background-color);
   border-radius: 1rem;
-  color: #fcfcfc;
+  color: var(--main-background-color);
   margin: -5rem 1rem 0;
   padding: 1rem;
 }

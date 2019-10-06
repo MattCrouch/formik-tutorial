@@ -3,7 +3,14 @@
 }
 
 html {
-  background: #fcfcfc;
+  --main-background-color: #fcfcfc;
+  --heading-background-color: #1f7a8c;
+  --container-background-color: #022b3a;
+  --selected-color: #6ccff6;
+  --text-color: #001011;
+  --error-color: #d00000;
+
+  background: var(--main-background-color);
   font-size: 22px;
 }
 

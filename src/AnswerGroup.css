@@ -9,13 +9,13 @@
   display: block;
   margin-bottom: 0.25rem;
   cursor: pointer;
-  background-color: #fcfcfc;
+  background-color: var(--main-background-color);
   border-radius: 1rem;
   width: 100%;
   padding: 0.5rem;
-  color: #001011;
+  color: var(--text-color);
 }
 
 .answer-group input:checked + label {
-  background-color: #6ccff6;
+  background-color: var(--selected-color);
 }

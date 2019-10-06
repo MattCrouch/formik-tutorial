@@ -12,7 +12,7 @@
 .vote input[type="text"] {
   display: block;
   width: 100%;
-  color: #001011;
+  color: var(--text-color);
 }
 
 .vote .validation-group {
@@ -21,7 +21,7 @@
 }
 
 .vote .validation-group.error {
-  background-color: #d00000;
+  background-color: var(--error-color);
 }
 
 .vote .input-group label {
@@ -36,7 +36,7 @@
 
 .vote input[type="submit"] {
   appearance: none;
-  background-color: #1f7a8c;
-  color: #fcfcfc;
+  background-color: var(--heading-background-color);
+  color: var(--main-background-color);
   cursor: pointer;
 }
