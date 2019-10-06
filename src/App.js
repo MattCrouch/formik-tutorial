@@ -1,6 +1,6 @@
 import React from "react";
-import "./App.css";
 import Vote from "./Vote";
+import "./App.css";
 
 const OPTIONS = [
   {

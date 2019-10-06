@@ -1,11 +1,11 @@
 import React from "react";
-import { Formik, Field } from "formik";
 import classNames from "classnames";
+import { Formik, Field } from "formik";
 import AnswerGroup from "./AnswerGroup";
 import "./Vote.css";
 
 // Form component
-function Form({ options, touched, errors, handleSubmit }) {
+function Form({ errors, handleSubmit, options, touched }) {
   return (
     <form className="vote" onSubmit={handleSubmit}>
       <div className="input-group">
@@ -16,7 +16,7 @@ function Form({ options, touched, errors, handleSubmit }) {
             error: !!errors.name && touched.name
           })}
         >
-          <Field autoComplete="name" type="text" id="name" name="name" />
+          <Field autoComplete="name" id="name" name="name" type="text" />
           {!!errors.name && touched.name && (
             <div className="error-message">{errors.name}</div>
           )}
@@ -54,8 +54,8 @@ function Vote({ options }) {
     <Formik
       initialValues={{ name: "", answer: "" }}
       onSubmit={onSubmit}
-      validate={validate}
       render={props => <Form {...props} options={options} />}
+      validate={validate}
     />
   );
 }

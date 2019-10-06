@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import "./AnswerGroup.css";
 
-function AnswerGroup({ options, field, form, props }) {
+function AnswerGroup({ field, form, options }) {
   return (
     <fieldset className="answer-group">
       <legend>Answer</legend>
@@ -17,8 +17,8 @@ function AnswerGroup({ options, field, form, props }) {
             <input
               {...field}
               id={`answer-${value}`}
-              type="radio"
               name={field.name}
+              type="radio"
               value={value}
             />
             <label htmlFor={`answer-${value}`}>{label}</label>
