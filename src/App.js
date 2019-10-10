@@ -2,6 +2,7 @@ import React from "react";
 import Vote from "./Vote";
 import "./App.css";
 
+// Potential voting options
 const OPTIONS = [
   {
     label: "Answer A",
@@ -21,6 +22,7 @@ const OPTIONS = [
   }
 ];
 
+// Contain the application
 function App() {
   return (
     <>
@@ -31,6 +33,7 @@ function App() {
       </header>
       <div className="container">
         <section className="vote-container">
+          {/* Display the vote component */}
           <Vote options={OPTIONS} />
         </section>
       </div>
