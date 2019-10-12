@@ -1,13 +1,13 @@
 import React from "react";
 import classNames from "classnames";
-import { Formik, Field } from "formik";
+import { Field, Form } from "formik";
 import AnswerGroup from "./AnswerGroup";
 import "./Vote.css";
 
-// This component is the form itself
-function Form({ errors, handleSubmit, options, touched }) {
+// Show the form
+function Vote({ errors, options, touched }) {
   return (
-    <form className="vote" onSubmit={handleSubmit}>
+    <Form className="vote">
       <div className="input-group">
         {/* Label every element as usual */}
         <label htmlFor="name">Name</label>
@@ -31,41 +31,7 @@ function Form({ errors, handleSubmit, options, touched }) {
 
       {/* Submit the form like any other */}
       <input type="submit" value="Vote now" />
-    </form>
-  );
-}
-
-// This component is what is rendered within to <App>
-function Vote({ options }) {
-  // Submit form values
-  const onSubmit = values => {
-    console.log(values);
-  };
-
-  // Make sure all the data within the form is valid
-  const validate = values => {
-    const errors = {};
-
-    if (!values.name) {
-      errors.name = "Name is required";
-    }
-
-    if (!values.answer) {
-      errors.answer = "Answer is required";
-    }
-
-    // The form will not submit without an empty `errors` object
-    return errors;
-  };
-
-  // Define the behaviour of the form using the Formik component
-  return (
-    <Formik
-      initialValues={{ name: "", answer: "" }}
-      onSubmit={onSubmit}
-      render={props => <Form {...props} options={options} />}
-      validate={validate}
-    />
+    </Form>
   );
 }
 

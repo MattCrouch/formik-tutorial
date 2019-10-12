@@ -1,5 +1,5 @@
 import React from "react";
-import Vote from "./Vote";
+import VoteContainer from "./VoteContainer";
 import "./App.css";
 
 // Potential voting options
@@ -34,7 +34,7 @@ function App() {
       <div className="container">
         <section className="vote-container">
           {/* Display the vote component */}
-          <Vote options={OPTIONS} />
+          <VoteContainer options={OPTIONS} />
         </section>
       </div>
     </>
