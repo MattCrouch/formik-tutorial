@@ -4,10 +4,7 @@ import { Formik, Field } from "formik";
 import AnswerGroup from "./AnswerGroup";
 import "./Vote.css";
 
-// This component is the form itself
-function Form({ errors, handleSubmit, options, touched }) {
-  return <form className="vote"></form>;
-}
+// Create a component to show the form
 
 // This component is what is rendered within to <App>
 function Vote({ options }) {
