@@ -28,6 +28,11 @@
   background-color: var(--action-hover-color);
 }
 
+.vote input[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .vote .error-message {
   font-size: 0.75rem;
   margin: 0.25rem 0 0 0.5rem;

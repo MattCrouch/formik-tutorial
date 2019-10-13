@@ -5,8 +5,11 @@ import Vote from "./Vote";
 // Hold all of the logic for the form
 function VoteContainer({ options }) {
   // Submit form values
-  const onSubmit = values => {
+  const onSubmit = async (values, { setSubmitting }) => {
     // Only called once the form is valid
+    console.log("submitting...");
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    setSubmitting(false);
     console.log(values);
   };
 

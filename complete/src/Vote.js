@@ -5,7 +5,7 @@ import AnswerGroup from "./AnswerGroup";
 import "./Vote.css";
 
 // Show the form
-function Vote({ errors, options, touched }) {
+function Vote({ errors, isSubmitting, options, touched }) {
   return (
     <Form className="vote">
       <div className="input-group">
@@ -30,7 +30,7 @@ function Vote({ errors, options, touched }) {
       <Field component={AnswerGroup} options={options} name="answer" />
 
       {/* Submit the form like any other */}
-      <input type="submit" value="Vote now" />
+      <input disabled={isSubmitting} type="submit" value="Vote now" />
     </Form>
   );
 }
