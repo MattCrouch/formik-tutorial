@@ -8,7 +8,7 @@ function VoteContainer({ options }) {
   const onSubmit = async (values, { setSubmitting }) => {
     // Only called once the form is valid
     console.log("submitting...");
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
     setSubmitting(false);
     console.log(values);
   };
