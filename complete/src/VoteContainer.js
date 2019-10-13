@@ -1,6 +1,14 @@
 import React from "react";
 import { Formik } from "formik";
 import Vote from "./Vote";
+import * as Yup from "yup";
+
+const schema = Yup.object().shape({
+  name: Yup.string().required("Name is required"),
+  answer: Yup.mixed()
+    .oneOf(["a", "b", "c", "d"])
+    .required("Answer is required")
+});
 
 // Hold all of the logic for the form
 function VoteContainer({ options }) {
@@ -13,29 +21,13 @@ function VoteContainer({ options }) {
     console.log(values);
   };
 
-  // Make sure all the data within the form is valid
-  const validate = values => {
-    const errors = {};
-
-    if (values.name === "") {
-      errors.name = "Name is required";
-    }
-
-    if (values.answer === "") {
-      errors.answer = "Answer is required";
-    }
-
-    // The form will not submit without an empty `errors` object
-    return errors;
-  };
-
   // Define the behaviour of the form using the Formik component
   return (
     <Formik
       initialValues={{ name: "", answer: "" }}
       onSubmit={onSubmit}
       render={props => <Vote {...props} options={options} />}
-      validate={validate}
+      validationSchema={schema}
     />
   );
 }

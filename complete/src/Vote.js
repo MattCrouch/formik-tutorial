@@ -19,8 +19,8 @@ const OPTIONS = [
     value: "c"
   },
   {
-    label: "Answer D",
-    value: "d"
+    label: "Answer E",
+    value: "e"
   }
 ];
 
