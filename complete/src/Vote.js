@@ -25,7 +25,7 @@ const OPTIONS = [
 ];
 
 // Show the form
-function Vote({ errors, isSubmitting, options, touched }) {
+function Vote({ errors, isSubmitting, touched }) {
   return (
     <Form className="vote">
       <div className="input-group">
