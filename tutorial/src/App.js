@@ -2,26 +2,6 @@ import React from "react";
 import VoteContainer from "./VoteContainer";
 import "./App.css";
 
-// Potential voting options
-const OPTIONS = [
-  {
-    label: "Answer A",
-    value: "a"
-  },
-  {
-    label: "Answer B",
-    value: "b"
-  },
-  {
-    label: "Answer C",
-    value: "c"
-  },
-  {
-    label: "Answer D",
-    value: "d"
-  }
-];
-
 // Contain the application
 function App() {
   return (

@@ -4,6 +4,26 @@ import { Field, Form } from "formik";
 import AnswerGroup from "./AnswerGroup";
 import "./Vote.css";
 
+// Potential voting options
+const OPTIONS = [
+  {
+    label: "Answer A",
+    value: "a"
+  },
+  {
+    label: "Answer B",
+    value: "b"
+  },
+  {
+    label: "Answer C",
+    value: "c"
+  },
+  {
+    label: "Answer D",
+    value: "d"
+  }
+];
+
 // Show the form
 function Vote({ errors, isSubmitting, options, touched }) {
   return (
@@ -27,7 +47,7 @@ function Vote({ errors, isSubmitting, options, touched }) {
       </div>
 
       {/* Use the `component` prop to add a custom component to the form instead */}
-      <Field component={AnswerGroup} options={options} name="answer" />
+      <Field component={AnswerGroup} options={OPTIONS} name="answer" />
 
       {/* Submit the form like any other */}
       <input disabled={isSubmitting} type="submit" value="Vote now" />
