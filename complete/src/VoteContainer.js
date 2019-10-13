@@ -17,11 +17,11 @@ function VoteContainer({ options }) {
   const validate = values => {
     const errors = {};
 
-    if (!values.name) {
+    if (values.name === "") {
       errors.name = "Name is required";
     }
 
-    if (!values.answer) {
+    if (values.answer === "") {
       errors.answer = "Answer is required";
     }
 
