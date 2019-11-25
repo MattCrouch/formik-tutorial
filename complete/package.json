@@ -2,6 +2,7 @@
   "name": "formik-tutorial",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mattcrouch.github.io/formikexample",
   "dependencies": {
     "classnames": "^2.2.6",
     "formik": "^1.5.8",
